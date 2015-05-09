@@ -987,6 +987,7 @@ color: $cgn-red;
           font-weight: 700;
           background: $cgn-red;
         }
+
         & > ul {
           right: 0;
         }
@@ -997,11 +998,12 @@ color: $cgn-red;
     .current-menu-ancestor > a,
     .current_page_item > a,
     .current_page_ancestor > a {
-      color: #fff!important;
+      color: #fff;
       background: $cgn-red;
-      padding: 0 20px;
+      padding: 0 10px;
       font-size: 1.6rem;
     }
+
 
     // last menu item on white background
     .children li:last-child {
@@ -1011,6 +1013,7 @@ color: $cgn-red;
         font-weight: 700;
         }
     }
+
 
     .sub-menu li a {
       font-size: 1.6rem;

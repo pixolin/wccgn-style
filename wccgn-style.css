@@ -719,9 +719,9 @@ aside ul li {
     .main-navigation .current-menu-ancestor > a,
     .main-navigation .current_page_item > a,
     .main-navigation .current_page_ancestor > a {
-      color: #fff !important;
+      color: #fff;
       background: #E30613;
-      padding: 0 20px;
+      padding: 0 10px;
       font-size: 1.6rem; }
     .main-navigation .children li:last-child {
       float: none; }
