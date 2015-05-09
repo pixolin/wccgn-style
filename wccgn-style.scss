@@ -719,6 +719,9 @@ table.wcpt-schedule {
   display: block;
 }
 
+.global-session {
+  background: #F8F8F8;
+}
 
 // 15. Navigation
 
@@ -977,10 +980,12 @@ color: $cgn-red;
         a {
           color: $cgn-red;
           font-weight: 700;
+          background: #fff;
         }
         a:hover {
           color: #fff;
           font-weight: 700;
+          background: $cgn-red;
         }
         & > ul {
           right: 0;
@@ -1015,6 +1020,10 @@ color: $cgn-red;
     .sub-menu li:last-child a {
         color: #fff;
         font-weight: 700;
+        background: $cgn-navigrey;
+        &:hover {
+          background: $cgn-red;
+        }
     }
 
   }//.main-navigation
