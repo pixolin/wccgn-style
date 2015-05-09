@@ -29,11 +29,11 @@
 // 1. SASS-Variables
 
 // Colors
-$cgn-red: #E30613;
-$cgn-navigrey: #979797;
+$cgn-red:        #E30613;
+$cgn-navigrey:   #979797;
 
 // Fonts
-$cgn-font: "Titillium Web", sans-serif;
+$cgn-font:       "Titillium Web", sans-serif;
 $cgn-fontweight: 700;
 
 // 2. Bascis (Typography)
@@ -64,6 +64,12 @@ strong, b {
   color: $cgn-red;
   font-weight: $cgn-fontweight;
 }
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
 
 a {
   text-decoration: none;
@@ -306,12 +312,41 @@ body {
 
 
 .widget-area .widget {
+  margin: 0 auto;
+  p {
+    margin: 0 0 10px 0;
+  }
   p, li, .textwidget {
     font-size: 18px;
     font-size: 1.8rem;
     line-height: 1.4;
   }
 }
+
+aside {
+  h3, h4 {
+  color: $cgn-red!important;
+  text-transform: uppercase;
+  }
+
+  &.widget_text {
+    text-align: left;
+  }
+  &.widget img {
+    max-width: 250px !important;
+    vertical-align: middle;
+    height: auto;
+  }
+  .media-partner, .catering {
+    display: none;
+  }
+
+  &.wcb_widget_sponsors, &.widget_nav_menu {
+    border-top: 1px solid $cgn-red;
+    padding: 20px 0;
+  }
+}
+
 
 footer {
   &[role="contentinfo"] {
@@ -351,12 +386,14 @@ footer {
 
 .site-content article {
   border-bottom: 1px solid #bcbcbc;
-  padding-bottom: 40px;
+}
+
+.page .site-content article {
+  border-bottom: none;
 }
 
 .home .site-content article {
   border-bottom: none;
-  padding-bottom: 0;
 }
 
 .entry-header .entry-title {
@@ -487,10 +524,10 @@ input {
 
 
 // 9. Sponsors
-a.sponsor-logo {
+
+.wcb_widget_sponsors a.sponsor-logo {
   float: left;
   margin: 0 10px 10px 0;
-  display: table-cell;
 }
 
 .sponsor-level {
@@ -531,11 +568,60 @@ a.sponsor-logo {
   }
 }
 
+#secondary .sponsor-level.bronze .sponsor-logo:nth-child(5) {
+  clear: both;
+}
+
+body.single-wcb_sponsor {
+  .entry-meta, .attachment-post-thumbnail {
+    display: none;
+  }
+  #secondary .attachment-post-thumbnail {
+    display: block;
+  }
+  background: #fff;
+}
+
+
+
+body.single-wcb_sponsor #secondary {
+  clear: both;
+  background: #fff;
+  padding: 30px 0;
+  border-top: none;
+}
+
+.wcb_widget_sponsors .sponsor-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.sponsor-level.community-partner {
+  display: none;
+}
+
+
+
 
 // 10. Tickets
 
 #tix-attendees .tix-columns-3 li {
   width: 30%;
+}
+
+.tix-column-remaining {
+  display: none;
+}
+
+a#tix-coupon-link {
+  color: #fff;
+  background: $cgn-navigrey;
+  padding: 6px 12px;
+  text-decoration: none;
 }
 
 // 11. Attendees
@@ -578,6 +664,18 @@ a.sponsor-logo {
   margin: 0 0 0 150px;
 }
 
+.wcorg-speaker {
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  overflow: hidden;
+  img {
+    float: left;
+    max-width: 250px;
+  }
+  h2 {
+    margin: 0 0 0 150px;
+  }
+}
 
 // 14. Sessions
 
@@ -598,6 +696,27 @@ a {
 .wcpt-schedule th {
   background: #eee;
   padding: 10px;
+}
+
+body.single-wcb_session footer.entry-meta {
+  display: none;
+}
+
+table.wcpt-schedule {
+  th {
+    white-space: nowrap;
+  }
+  > * {
+    font-size: .9em !important;
+  }
+}
+
+.entry-content table a.wcpt-session-title {
+  font-size: .95em !important;
+}
+
+.wcpt-session-speakers {
+  display: block;
 }
 
 
@@ -680,12 +799,6 @@ color: $cgn-red;
 
 
 // 16. Media Queries
-
-
-
-
-
-
 // 16.1 Small Screens (below 900px)
 @media only screen and (max-width: 899px) {
 
@@ -768,11 +881,29 @@ color: $cgn-red;
   }
 }
 
-
 #tix-attendees li {
     float: none;
     width: 100%;
   }
+
+.contact-form {
+  input {
+      &[type="text"], &[type="email"] {
+        max-width: 95%;
+        width: 300px;
+      }
+    }
+    textarea {
+      max-width: 95%;
+      width: 300px;
+    }
+  }
+
+ .widget-area .widget p, .widget-area .widget li, .widget-area .widget .textwidget {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+
 }
 
 // 16.1 Overwrite settings of TwentyTwelve
@@ -792,6 +923,10 @@ color: $cgn-red;
       color: #FFF;
       background-color: $cgn-red;
     }
+  }
+
+  .widget-area {
+    float: none;
   }
 
 }
@@ -863,7 +998,6 @@ color: $cgn-red;
       font-size: 1.6rem;
     }
 
-
     // last menu item on white background
     .children li:last-child {
       float: none;
@@ -885,71 +1019,6 @@ color: $cgn-red;
 
   }//.main-navigation
 
-
-
-
-  .children .current_page_item a {
-        padding: 0.571428571rem 0.714285714rem;
-  }
-  /*
-
-
-
-
-    li {
-      margin: 0;
-    }
-    ul.nav-menu, div.nav-menu > ul {
-      border-top: none;
-      border-bottom: 0 solid #111;
-      display: inline-block !important;
-      text-align: left;
-      width: 100%;
-    }
-  }
-
-  */
-
-
-  .site-header {
-    background: #fff url('https://cologne.wordcamp.org/2015/files/2014/12/cgnpano1920.jpg') right top fixed no-repeat !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 460px;
-  }
-
-
-}
-
-// 16.3 Large Screens (1920px and beyond)
-@media only screen and (min-width: 1921px) {
-   .site-header {
-    background: #fff url('https://cologne.wordcamp.org/2015/files/2014/12/cgnpano1920.jpg') center top fixed no-repeat !important;
-    height: 460px;
-  }
-
-}
-
-
-/*
-@media only screen and (min-width: 600px) {
-
-  #tix-attendees {
-    .tix-columns-3 li {
-      width: 30%;
-    }
-    li {
-      float: left;
-      width: 50%;
-      margin-bottom: 20px;
-      height: 80px;
-    }
-  }
-  .wcorg-sponsorsp, .main-navigation {
-    margin: 0;
-  }
   #content {
     padding: 50px 0;
   }
@@ -964,12 +1033,14 @@ color: $cgn-red;
     width: 55%;
     padding: 3% 0;
   }
+
   .section-wrapper {
     clear: both;
     padding: 60px 0;
     overflow: hidden;
     border-top: 1px solid #dfdfb4;
   }
+
   .home #main {
     h3 {
       font-size: 24px;
@@ -984,7 +1055,15 @@ color: $cgn-red;
       opacity: .8;
     }
   }
-  .site-header {
+
+ .site-header {
+
+    background: #fff url('https://cologne.wordcamp.org/2015/files/2014/12/cgnpano1920.jpg') right top fixed no-repeat !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 460px;
 
     h1 {
       font-size: 30px;
@@ -995,181 +1074,38 @@ color: $cgn-red;
       margin-left: auto;
       margin-right: auto;
     }
+
     h2 {
       font-size: 36px;
       font-size: 3.6rem;
       line-height: .8;
       margin: 30px 0 0;
     }
+
   }
-  .header-image {
-    margin: 4em auto;
-  }
-  .home {
-    #main {
-      background: #fff;
-      color: #444;
-      width: 100%;
-      border-top: none;
+
+  #tix-attendees {
+    .tix-columns-3 li {
+      width: 30%;
     }
-    .site-header {
-      h2 {
-        a:hover {
-          color: #fff;
-        }
-        color: #fff;
-      }
+    li {
+      float: left;
+      width: 50%;
+      margin-bottom: 20px;
+      height: 80px;
     }
   }
 
-
-
-  .widget-area {
-    float: none;
+  .wcorg-sponsorsp, .main-navigation {
+    margin: 0;
   }
 
 }
-*/
-/*
-@media only screen and (max-width: 900px) {
-  #primary, .inner-wrapper, .site {
-    margin: 0 auto 60px auto;
-  }
-  .main-navigation a {
-    color: #fff;
-  }
-  .contact-form {
-    input {
-      &[type="text"], &[type="email"] {
-        max-width: 95%;
-        width: 300px;
-      }
-    }
-    textarea {
-      max-width: 95%;
-      width: 300px;
-    }
-  }
-  .site-content article {
-    margin-bottom: 1.714286rem;
-  }
-  #secondary {
-  padding: 20px 10px;
-  }
 
-  .widget-area .widget p, .widget-area .widget li, .widget-area .widget .textwidget {
-    font-size: 14px;
-    font-size: 1.4rem;
+// 16.3 Large Screens (1920px and beyond)
+@media only screen and (min-width: 1921px) {
+   .site-header {
+    background: #fff url('https://cologne.wordcamp.org/2015/files/2014/12/cgnpano1920.jpg') center top fixed no-repeat !important;
+    height: 460px;
   }
 }
-
-@media only screen and (min-width: 599px) {
-
-
-}
-
-.widget-area .widget {
-  margin: 0 auto;
-  p {
-    margin: 0 0 10px 0;
-  }
-}
-
-aside {
-  h3, h4 {
-  color: $cgn-red!important;
-  text-transform: uppercase;
-  }
-
-  &.widget_text {
-    text-align: left;
-  }
-  &.widget img {
-    max-width: 250px !important;
-    vertical-align: middle;
-    height: auto;
-  }
-  .media-partner, .catering {
-    display: none;
-  }
-
-  &.wcb_widget_sponsors, &.widget_nav_menu {
-    border-top: 1px solid $cgn-red;
-    padding: 20px 0;
-  }
-}
-
-
-body.single-wcb_session footer.entry-meta {
-  display: none;
-}
-
-table.wcpt-schedule {
-  th {
-    white-space: nowrap;
-  }
-  > * {
-    font-size: .9em !important;
-  }
-}
-
-.entry-content table a.wcpt-session-title {
-  font-size: .95em !important;
-}
-
-#secondary .sponsor-level.bronze .sponsor-logo:nth-child(5) {
-  clear: both;
-}
-
-
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-.tix-column-remaining {
-  display: none;
-}
-
-.wcpt-session-speakers {
-  display: block;
-}
-
-body.single-wcb_sponsor {
-  .entry-meta, .attachment-post-thumbnail {
-    display: none;
-  }
-  #secondary .attachment-post-thumbnail {
-    display: block;
-  }
-  background: #fff;
-}
-
-a#tix-coupon-link {
-  color: #fff;
-  background: #98986a;
-  padding: 6px 12px;
-  text-decoration: none;
-}
-
-body.single-wcb_sponsor #secondary {
-  clear: both;
-  background: #fff;
-  padding: 30px 0;
-  border-top: none;
-}
-
-.wcb_widget_sponsors .sponsor-logo img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.sponsor-level.community-partner {
-  display: none;
-}
-*/
-
