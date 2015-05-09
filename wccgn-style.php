@@ -37,6 +37,6 @@ function wccgn_style() {
 	wp_enqueue_style(
 		$handle = 'wccgn',
 		$src    = plugins_url('wccgn-style.css', __FILE__),
-		$ver    = '1.0',
+		$ver    = '1.0'
 		);
 }
