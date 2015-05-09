@@ -7,15 +7,21 @@
 
 /*
 * Content
-* 1. SASS-Variables
-* 2. Basics (Typography)
-* 3. Setting up the page
-* 4. WordCamp-Logo
-* 5. Content
-* 6. Sections (#main, #primary, #secondary, footer)
-* 7. Styling Content
-* 8. Images
-* 9. styling our sponsors
+* 1.  SASS-Variables
+* 2.  Basics (Typography)
+* 3.  Setting up the page
+* 4.  WordCamp-Logo
+* 5.  Content
+* 6.  Sections (#main, #primary, #secondary, footer)
+* 7.  Styling Content
+* 8.  Images
+* 9.  Sponsors
+* 10. Tickets
+* 11. Attendees
+* 12. Organizers
+* 13. Speakers
+* 14. Sessions
+* 15. Navigation
 */
 
 // 1. SASS-Variables
@@ -398,6 +404,67 @@ li.comment {
   margin-bottom: 20px;
 }
 
+.comments-area li.bypostauthor cite span {
+  position: absolute;
+  margin-left: 5px;
+  margin-left: .357142857rem;
+  padding: 2px 5px;
+  padding: .142857143rem .357142857rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.entry-header .comments-link {
+  margin-top: 24px;
+  margin-top: 1.714285714rem;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.846153846;
+  color: #757575;
+}
+
+.entry-content table, .comment-content table {
+  border-bottom: 1px solid #ededed;
+  color: #757575;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2;
+  margin: 0 0 24px;
+  margin: 0 0 1.714285714rem;
+  width: 100%;
+}
+
+input {
+  &[type="submit"]:active, &[type="button"]:active, &[type="reset"]:active {
+    color: #fff;
+    background-color: $cgn-red;
+    background-repeat: repeat-x;
+    background-image: none;
+    box-shadow: none;
+    border: none;
+  }
+  &[type="submit"]:hover {
+    background: $cgn-red;
+    opacity: .7;
+    color: #fff;
+  }
+}
+
+#respond form {
+  input[type="text"], textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.714285714;
+    padding: 10px;
+    background: #fff;
+    padding: .714285714rem;
+    border: 1px solid $cgn-navigrey;
+    width: 100%;
+  }
+}
+
 // 8. Images
 .feature-image {
   width: 40%;
@@ -417,8 +484,7 @@ li.comment {
 }
 
 
-// 9. styling our sponsors
-// sponsor logos
+// 9. Sponsors
 a.sponsor-logo {
   float: left;
   margin: 0 10px 10px 0;
@@ -436,14 +502,54 @@ a.sponsor-logo {
   font-size: 1.8rem;
 }
 
+.wcorg-sponsors {
+  p, ul {
+    margin: 0 0 1em 300px;
+  }
+  h2 {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  color: $cgn-red;
+  text-transform: uppercase;
+  border-bottom: 1px solid $cgn-red;
+  }
+
+}
+
+.wcorg-sponsor {
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  overflow: hidden;
+  img {
+    float: left;
+    max-width: 250px;
+  }
+  h3 {
+    margin: 0 0 0 300px;
+  }
+}
+
+
 // 10. Tickets
 
 #tix-attendees .tix-columns-3 li {
   width: 30%;
 }
 
-// 11. Organizers
-// Logo for social networking
+// 11. Attendees
+#tix-attendees li {
+  float: none;
+  width: 100%;
+}
+
+
+#tix-attendees .tix-columns-3 li {
+  width: 95%;
+}
+
+
+// 12. Organizers
+// Icons for social networking for speakers, organizers
 .socialbm {
   margin: 15px 0 0 150px;
   a img {
@@ -452,7 +558,48 @@ a.sponsor-logo {
   }
 }
 
-// 12. Navigation
+// 13. Speakers
+
+.wcorg-speaker-description .avatar, .wcorg-organizer-description .avatar {
+  float: left;
+  margin: 0 20px 10px 0;
+}
+
+.wcorg-speaker, .wcorg-organizer {
+  border-bottom: 1px solid #fff;
+  margin: 0;
+  padding: 0 0 20px;
+  overflow: hidden;
+}
+
+.wcorg-speaker p, .wcorg-organizer p {
+  margin: 0 0 0 150px;
+}
+
+
+// 14. Sessions
+
+a {
+  &.wcpt-session-title {
+    font-size: 18px;
+    color: #333 !important;
+  }
+  &:visited.wcpt-session-title {
+    color: #333 !important;
+  }
+}
+
+.wcpt-col-time {
+  padding: 0 40px 0 0;
+}
+
+.wcpt-schedule th {
+  background: #eee;
+  padding: 10px;
+}
+
+
+// 15. Navigation
 // Menu button for small screens
 ul#menu-menu.toggled-on li {
   width: auto;
@@ -465,9 +612,71 @@ ul#menu-menu.toggled-on li {
     text-decoration: none;
   }
 }
-// appearance of toggle menu
+
+.menu-toggle {
+  padding: 10px 20px;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.428571429;
+  color: #fff;
+  background-color: $cgn-red;
+  background-repeat: repeat-x;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
 
 
+.menu-toggle {
+  &:active, &:hover, &.toggled-on {
+    color: #fff;
+    background-color: $cgn-red;
+    background-repeat: repeat-x;
+    background-image: none;
+    box-shadow: none;
+    border: none;
+    opacity: .7;
+  }
+}
+
+button:active {
+  color: #fff;
+  background-color: $cgn-red;
+  background-repeat: repeat-x;
+  background-image: none;
+  box-shadow: none;
+  border: none;
+}
+
+
+
+.main-navigation a {
+  color: #fff;
+}
+
+
+/* Nav Menu Bottom */
+aside ul li {
+    display: inline; white-space: nowrap;
+      &:after {
+        content: " \00b7";
+      }
+      &:last-child:after {
+        content: none;
+      }
+}
+.widget-area .widget a:hover {
+color: $cgn-red;
+}
+
+// 16. Media Queries
+
+// 16.1 Small Screens (below 900px)
+@media only screen and (max-width: 899px) {
+
+// toggle menu
 .main-navigation ul.nav-menu.toggled-on {
   .current_page_item, .current_page_parent, .current_page_parent li {
     background: $cgn-red;
@@ -509,201 +718,23 @@ ul#menu-menu.toggled-on li {
     }
 }
 
-.menu-toggle {
-  padding: 10px 20px;
-  padding: 1rem 2rem;
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 1.428571429;
-  color: #fff;
-  background-color: $cgn-red;
-  background-repeat: repeat-x;
-  background-image: none;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-
-.menu-toggle {
-  &:active, &:hover, &.toggled-on {
-    color: #fff;
-    background-color: $cgn-red;
-    background-repeat: repeat-x;
-    background-image: none;
-    box-shadow: none;
-    border: none;
-    opacity: .7;
-  }
-}
-
-button:active {
-  color: #fff;
-  background-color: $cgn-red;
-  background-repeat: repeat-x;
-  background-image: none;
-  box-shadow: none;
-  border: none;
-}
-
-input {
-  &[type="submit"]:active, &[type="button"]:active, &[type="reset"]:active {
-    color: #fff;
-    background-color: $cgn-red;
-    background-repeat: repeat-x;
-    background-image: none;
-    box-shadow: none;
-    border: none;
-  }
-  &[type="submit"]:hover {
-    background: $cgn-red;
-    opacity: .7;
-    color: #fff;
-  }
-}
-
-#respond form {
-  input[type="text"], textarea {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 1.714285714;
-    padding: 10px;
-    background: #fff;
-    padding: .714285714rem;
-    border: 1px solid $cgn-navigrey;
-    width: 100%;
-  }
-}
-
-.comments-area li.bypostauthor cite span {
-  position: absolute;
-  margin-left: 5px;
-  margin-left: .357142857rem;
-  padding: 2px 5px;
-  padding: .142857143rem .357142857rem;
-  font-size: 14px;
-  font-size: 1.4rem;
-}
-
-.entry-header .comments-link {
-  margin-top: 24px;
-  margin-top: 1.714285714rem;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1.846153846;
-  color: #757575;
-}
-
-.entry-content table, .comment-content table {
-  border-bottom: 1px solid #ededed;
-  color: #757575;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 2;
-  margin: 0 0 24px;
-  margin: 0 0 1.714285714rem;
-  width: 100%;
-}
-
-.wcorg-speaker-description .avatar, .wcorg-organizer-description .avatar {
-  float: left;
-  margin: 0 20px 10px 0;
-}
-
-.wcorg-speaker, .wcorg-organizer {
-  border-bottom: 1px solid #fff;
-  margin: 0;
-  padding: 0 0 20px;
-  overflow: hidden;
-}
-
-.wcorg-speaker p, .wcorg-organizer p {
-  margin: 0 0 0 150px;
-}
-
-.wcorg-sponsors {
-  p, ul {
-    margin: 0 0 1em 300px;
-  }
-}
-
-a {
-  &.wcpt-session-title {
-    font-size: 18px;
-    color: #333 !important;
-  }
-  &:visited.wcpt-session-title {
-    color: #333 !important;
-  }
-}
-
-.wcpt-col-time {
-  padding: 0 40px 0 0;
-}
-
-.wcpt-schedule th {
-  background: #eee;
-  padding: 10px;
-}
-
-.wcorg-sponsor {
-  margin: 0 0 20px;
-  padding: 0 0 20px;
-  overflow: hidden;
-  img {
-    float: left;
-    max-width: 250px;
-  }
-  h3 {
-    margin: 0 0 0 300px;
-  }
-}
-
-.wcorg-sponsors h2 {
-  margin-bottom: 20px;
-  padding: 10px 0;
-  color: $cgn-red;
-  text-transform: uppercase;
-  border-bottom: 1px solid $cgn-red;
-}
-
-#tix-attendees li {
-  float: none;
-  width: 100%;
-}
-
-
-.main-navigation a {
-  color: #fff;
-}
-
-#tix-attendees .tix-columns-3 li {
-  width: 95%;
-}
-
-/* Menu Bottom */
-aside ul li {
-    display: inline; white-space: nowrap;
-      &:after {
-        content: " \00b7";
-      }
-      &:last-child:after {
-        content: none;
-      }
-}
-.widget-area .widget a:hover {
-color: $cgn-red;
-}
-
-@media only screen and (min-width: 480px) {
 
   #tix-attendees li {
     float: none;
     width: 100%;
   }
 }
+
+// 16.2 Intermediate Screens (900px to 1919px)
+@media only screen and (min-width: 900px) and (max-width: 1919px) {
+
+}
+
+// 16.3 Large Screens (1920px and beyond)
+@media only screen and (min-width: 1920px) {
+
+}
+
 
 @media only screen and (min-width: 600px) {
   nav#site-navigation {
@@ -874,43 +905,13 @@ color: $cgn-red;
   }
 
 
-/*
 
-  .wcorg-sponsor {
-
-
-    img {
-      float: none;
-    }
-
-    h3 {
-      margin: 0;
-    }
-  }
-*/
   .widget-area {
     float: none;
   }
 
 }
 
-/*
-@media only screen and (min-width: 992px) {
-  .wcorg-sponsors {
-    p, ul {
-      margin: 0 0 1em 300px;
-    }
-  }
-  .wcorg-sponsor {
-    img {
-      float: left;
-    }
-    h3 {
-      margin: 0 0 0 300px;
-    }
-  }
-}
-*/
 @media only screen and (max-width: 599px) {
   #primary, .inner-wrapper, .site {
     margin: 0 auto 60px auto;
