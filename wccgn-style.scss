@@ -22,6 +22,8 @@
 * 13. Speakers
 * 14. Sessions
 * 15. Navigation
+* 16. Media Queries
+*
 */
 
 // 1. SASS-Variables
@@ -860,6 +862,7 @@ color: $cgn-red;
       padding: 0 20px;
       font-size: 1.6rem;
     }
+
 
     // last menu item on white background
     .children li:last-child {
