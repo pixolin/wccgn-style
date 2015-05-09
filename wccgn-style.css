@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 * Custom Style for WordCamp Cologne MMXV
 * Based on awesome Twenty Twelve
@@ -528,18 +527,10 @@ a:visited.wcpt-session-title {
   padding: 10px; }
 
 /* line 604, wccgn-style.scss */
-ul#menu-menu.toggled-on li {
-  width: auto;
-  background: #fff;
-  border-radius: 0;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-size: 1.8rem; }
-  /* line 611, wccgn-style.scss */
-  ul#menu-menu.toggled-on li a {
-    text-decoration: none; }
+.main-navigation a {
+  color: #fff; }
 
-/* line 616, wccgn-style.scss */
+/* line 612, wccgn-style.scss */
 .menu-toggle {
   padding: 10px 20px;
   padding: 1rem 2rem;
@@ -554,8 +545,8 @@ ul#menu-menu.toggled-on li {
   border-radius: 0;
   box-shadow: none; }
 
-/* line 633, wccgn-style.scss */
-.menu-toggle:active, .menu-toggle:hover, .menu-toggle.toggled-on {
+/* line 629, wccgn-style.scss */
+.menu-toggle:active, .menu-toggle:hover, .menu-toggle:focus, .menu-toggle.toggled-on {
   color: #fff;
   background-color: #E30613;
   background-repeat: repeat-x;
@@ -564,7 +555,7 @@ ul#menu-menu.toggled-on li {
   border: none;
   opacity: .7; }
 
-/* line 644, wccgn-style.scss */
+/* line 640, wccgn-style.scss */
 button:active {
   color: #fff;
   background-color: #E30613;
@@ -573,69 +564,131 @@ button:active {
   box-shadow: none;
   border: none; }
 
-/* line 655, wccgn-style.scss */
-.main-navigation a {
-  color: #fff; }
+/*
 
+ul#menu-menu.toggled-on li {
+  width: auto;
+  background: #fff;
+  border-radius: 0;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  a {
+    text-decoration: none;
+  }
+}
+ */
 /* Nav Menu Bottom */
-/* line 661, wccgn-style.scss */
+/* line 666, wccgn-style.scss */
 aside ul li {
   display: inline;
   white-space: nowrap; }
-  /* line 663, wccgn-style.scss */
+  /* line 668, wccgn-style.scss */
   aside ul li:after {
     content: " \00b7"; }
-  /* line 666, wccgn-style.scss */
+  /* line 671, wccgn-style.scss */
   aside ul li:last-child:after {
     content: none; }
 
-/* line 670, wccgn-style.scss */
+/* line 675, wccgn-style.scss */
 .widget-area .widget a:hover {
   color: #E30613; }
 
 @media only screen and (max-width: 899px) {
-  /* line 681, wccgn-style.scss */
-  .main-navigation ul.nav-menu.toggled-on .current_page_item, .main-navigation ul.nav-menu.toggled-on .current_page_parent, .main-navigation ul.nav-menu.toggled-on .current_page_parent li {
-    background: #E30613; }
-  /* line 685, wccgn-style.scss */
-  .main-navigation ul.nav-menu.toggled-on li {
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 1.42857143;
-    display: block;
-    background: #979797;
-    padding: 20px;
-    margin: 0;
-    z-index: 99;
-    position: relative;
-    border-bottom: 1px solid #fff;
-    text-align: left; }
-  /* line 700, wccgn-style.scss */
-  .main-navigation ul.nav-menu.toggled-on .children li {
-    padding: 5px 5px 5px 20px;
-    border: none; }
-    /* line 703, wccgn-style.scss */
-    .main-navigation ul.nav-menu.toggled-on .children li:before {
-      position: absolute;
-      top: 8px;
-      margin: 8px 0 0 -12px;
-      vertical-align: middle;
-      display: inline-block;
-      width: 4px;
-      height: 4px;
-      background: #ccc;
-      content: ""; }
-  /* line 715, wccgn-style.scss */
-  .main-navigation ul.nav-menu.toggled-on a, .main-navigation ul.nav-menu.toggled-on a:visited, .main-navigation ul.nav-menu.toggled-on a:hover, .main-navigation ul.nav-menu.toggled-on a:active, .main-navigation ul.nav-menu.toggled-on a:focus {
-    text-decoration: none;
-    color: #fff; }
+  /* line 690, wccgn-style.scss */
+  .main-navigation ul.nav-menu,
+  .main-navigation div.nav-menu > ul {
+    display: none !important; }
 
-  /* line 722, wccgn-style.scss */
+  /* line 696, wccgn-style.scss */
+  .main-navigation ul.nav-menu.toggled-on {
+    display: inline-block !important; }
+    /* line 701, wccgn-style.scss */
+    .main-navigation ul.nav-menu.toggled-on .current_page_item, .main-navigation ul.nav-menu.toggled-on .current_page_parent, .main-navigation ul.nav-menu.toggled-on .current_page_parent li {
+      background: #E30613; }
+    /* line 705, wccgn-style.scss */
+    .main-navigation ul.nav-menu.toggled-on li {
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 1.42857143;
+      display: block;
+      background: #979797;
+      padding: 20px;
+      margin: 0;
+      z-index: 99;
+      position: relative;
+      border-bottom: 1px solid #fff;
+      text-align: left; }
+      /* line 717, wccgn-style.scss */
+      .main-navigation ul.nav-menu.toggled-on li:hover {
+        background: #E30613; }
+    /* line 722, wccgn-style.scss */
+    .main-navigation ul.nav-menu.toggled-on .children li {
+      padding: 5px 5px 5px 20px;
+      border: none; }
+      /* line 725, wccgn-style.scss */
+      .main-navigation ul.nav-menu.toggled-on .children li:before {
+        position: absolute;
+        top: 8px;
+        margin: 8px 0 0 -12px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background: #ccc;
+        content: ""; }
+    /* line 737, wccgn-style.scss */
+    .main-navigation ul.nav-menu.toggled-on a, .main-navigation ul.nav-menu.toggled-on a:visited, .main-navigation ul.nav-menu.toggled-on a:hover, .main-navigation ul.nav-menu.toggled-on a:active, .main-navigation ul.nav-menu.toggled-on a:focus {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff; }
+
+  /* line 745, wccgn-style.scss */
+  .menu-toggle {
+    display: inline;
+    margin-bottom: 10px; }
+
+  /* line 750, wccgn-style.scss */
+  .site-header {
+    background: #fff url("https://cologne.wordcamp.org/2015/files/2015/05/cgnpano899.jpg") center top fixed no-repeat !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px; }
+
+  /* line 758, wccgn-style.scss */
+  .header-image {
+    margin: 20px auto;
+    width: 265px; }
+
+  /* line 764, wccgn-style.scss */
+  .wcorg-sponsors h3, .wcorg-sponsors p, .wcorg-sponsors ul {
+    margin: 0; }
+
+  /* line 770, wccgn-style.scss */
   #tix-attendees li {
     float: none;
     width: 100%; } }
-@media only screen and (min-width: 600px) {
-  /* line 740, wccgn-style.scss */
+@media screen and (min-width: 600px) {
+  /* line 778, wccgn-style.scss */
+  .main-navigation li a {
+    line-height: 1; }
+
+  /* line 782, wccgn-style.scss */
+  .main-navigation ul.nav-menu,
+  .main-navigation div.nav-menu > ul {
+    width: auto; }
+
+  /* line 787, wccgn-style.scss */
+  .main-navigation li ul li a {
+    background-color: #979797; }
+    /* line 789, wccgn-style.scss */
+    .main-navigation li ul li a:hover {
+      color: #FFF;
+      background-color: #E30613; } }
+@media only screen and (min-width: 900px) {
+  /* line 800, wccgn-style.scss */
   nav#site-navigation {
     position: fixed;
     top: 0;
@@ -644,309 +697,93 @@ aside ul li {
     left: 0;
     z-index: 99999; }
 
-  /* line 748, wccgn-style.scss */
-  .main-navigation a {
-    color: #fff; }
-
-  /* line 753, wccgn-style.scss */
-  .main-navigation .current-menu-item > a, .main-navigation .current-menu-ancestor > a, .main-navigation .current_page_item > a, .main-navigation .current_page_ancestor > a {
-    color: #fff !important;
-    background: #E30613;
-    padding: 0 20px;
-    font-size: 1.6rem; }
-  /* line 761, wccgn-style.scss */
-  .main-navigation .children .current_page_item a {
-    padding: 0.571428571rem 0.714285714rem; }
-  /* line 768, wccgn-style.scss */
-  .main-navigation li a:hover {
-    color: #fff;
-    background-color: #E30613; }
-  /* line 773, wccgn-style.scss */
-  .main-navigation li:last-child {
-    float: right;
-    background: #fff; }
-    /* line 776, wccgn-style.scss */
-    .main-navigation li:last-child a {
-      color: #E30613;
-      font-weight: 400; }
-    /* line 780, wccgn-style.scss */
-    .main-navigation li:last-child a:hover {
+  /* line 809, wccgn-style.scss */
+  .main-navigation {
+    margin: 0; }
+    /* line 813, wccgn-style.scss */
+    .main-navigation ul.nav-menu {
+      width: 100%;
+      max-width: 1040px;
+      border: none; }
+    /* line 821, wccgn-style.scss */
+    .main-navigation li {
+      margin: 0; }
+      /* line 824, wccgn-style.scss */
+      .main-navigation li a {
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        font-size: 1.6rem;
+        line-height: 3.692307692;
+        padding: 0 10px; }
+        /* line 831, wccgn-style.scss */
+        .main-navigation li a:hover {
+          color: #fff;
+          background-color: #E30613; }
+      /* line 837, wccgn-style.scss */
+      .main-navigation li:last-child {
+        float: right;
+        background: #fff; }
+        /* line 840, wccgn-style.scss */
+        .main-navigation li:last-child a {
+          color: #E30613;
+          font-weight: 400; }
+        /* line 844, wccgn-style.scss */
+        .main-navigation li:last-child a:hover {
+          color: #fff;
+          font-weight: 700; }
+        /* line 848, wccgn-style.scss */
+        .main-navigation li:last-child > ul {
+          right: 0; }
+    /* line 854, wccgn-style.scss */
+    .main-navigation .current-menu-item > a,
+    .main-navigation .current-menu-ancestor > a,
+    .main-navigation .current_page_item > a,
+    .main-navigation .current_page_ancestor > a {
+      color: #fff !important;
+      background: #E30613;
+      padding: 0 20px;
+      font-size: 1.6rem; }
+    /* line 865, wccgn-style.scss */
+    .main-navigation .children li:last-child {
+      float: none; }
+      /* line 867, wccgn-style.scss */
+      .main-navigation .children li:last-child a {
+        color: #fff;
+        font-weight: 700; }
+    /* line 873, wccgn-style.scss */
+    .main-navigation .sub-menu li a {
+      font-size: 1.6rem;
+      padding: 0 30px;
+      width: 150px; }
+    /* line 878, wccgn-style.scss */
+    .main-navigation .sub-menu li:last-child a {
       color: #fff;
       font-weight: 700; }
-  /* line 787, wccgn-style.scss */
-  .main-navigation li:last-child.current_page_item a {
-    color: #fff; }
-  /* line 794, wccgn-style.scss */
-  .main-navigation a {
-    color: #fff;
-    padding: 0 15px;
-    font-size: 1.6rem; }
-  /* line 799, wccgn-style.scss */
-  .main-navigation .sub-menu li a {
-    font-size: 1.6rem;
-    padding: 0 30px;
-    width: 150px; }
-  /* line 804, wccgn-style.scss */
-  .main-navigation .sub-menu li:last-child a {
-    color: #fff;
-    font-weight: 700; }
-  /* line 809, wccgn-style.scss */
-  .main-navigation li {
-    margin: 0; }
-  /* line 812, wccgn-style.scss */
-  .main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
-    border-top: none;
-    border-bottom: 0 solid #111;
-    display: inline-block !important;
-    text-align: left;
-    width: 100%; }
 
-  /* line 822, wccgn-style.scss */
-  #tix-attendees .tix-columns-3 li {
-    width: 30%; }
-  /* line 825, wccgn-style.scss */
-  #tix-attendees li {
-    float: left;
-    width: 50%;
-    margin-bottom: 20px;
-    height: 80px; }
+  /* line 888, wccgn-style.scss */
+  .children .current_page_item a {
+    padding: 0.571428571rem 0.714285714rem; }
 
-  /* line 832, wccgn-style.scss */
-  .wcorg-sponsorsp, .main-navigation {
-    margin: 0; }
+  /*
 
-  /* line 835, wccgn-style.scss */
-  #content {
-    padding: 50px 0; }
 
-  /* line 839, wccgn-style.scss */
-  .feature-image {
-    width: 40%;
-    float: left;
-    display: block; }
 
-  /* line 844, wccgn-style.scss */
-  .feature-content {
-    float: right;
-    width: 55%;
-    padding: 3% 0; }
 
-  /* line 849, wccgn-style.scss */
-  .section-wrapper {
-    clear: both;
-    padding: 60px 0;
-    overflow: hidden;
-    border-top: 1px solid #dfdfb4; }
+    li {
+      margin: 0;
+    }
+    ul.nav-menu, div.nav-menu > ul {
+      border-top: none;
+      border-bottom: 0 solid #111;
+      display: inline-block !important;
+      text-align: left;
+      width: 100%;
+    }
+  }
 
-  /* line 856, wccgn-style.scss */
-  .home #main h3 {
-    font-size: 24px;
-    font-size: 2.4rem;
-    line-height: 1;
-    padding: 0; }
-  /* line 862, wccgn-style.scss */
-  .home #main h4 {
-    font-size: 48px;
-    font-size: 4.8rem;
-    color: #72724f;
-    opacity: .8; }
-
-  /* line 871, wccgn-style.scss */
-  .site-header h1 {
-    font-size: 30px;
-    font-size: 3rem;
-    line-height: 1;
-    margin-bottom: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-  /* line 880, wccgn-style.scss */
-  .site-header h2 {
-    font-size: 36px;
-    font-size: 3.6rem;
-    line-height: .8;
-    margin: 30px 0 0; }
-
-  /* line 887, wccgn-style.scss */
-  .header-image {
-    margin: 4em auto; }
-
-  /* line 891, wccgn-style.scss */
-  .home #main {
-    background: #fff;
-    color: #444;
-    width: 100%;
-    border-top: none; }
-  /* line 898, wccgn-style.scss */
-  .home .site-header h2 {
-    color: #fff; }
-    /* line 899, wccgn-style.scss */
-    .home .site-header h2 a:hover {
-      color: #fff; }
-
-  /* line 909, wccgn-style.scss */
-  .widget-area {
-    float: none; } }
-@media only screen and (max-width: 599px) {
-  /* line 916, wccgn-style.scss */
-  #primary, .inner-wrapper, .site {
-    margin: 0 auto 60px auto; }
-
-  /* line 919, wccgn-style.scss */
-  .main-navigation a {
-    color: #fff; }
-
-  /* line 924, wccgn-style.scss */
-  .contact-form input[type="text"], .contact-form input[type="email"] {
-    max-width: 95%;
-    width: 300px; }
-  /* line 929, wccgn-style.scss */
-  .contact-form textarea {
-    max-width: 95%;
-    width: 300px; }
-
-  /* line 934, wccgn-style.scss */
-  .site-content article {
-    margin-bottom: 1.714286rem; }
-
-  /* line 937, wccgn-style.scss */
-  #secondary {
-    padding: 20px 10px; }
-
-  /* line 941, wccgn-style.scss */
-  .widget-area .widget p, .widget-area .widget li, .widget-area .widget .textwidget {
-    font-size: 14px;
-    font-size: 1.4rem; } }
-@media only screen and (min-width: 599px) {
-  /* line 949, wccgn-style.scss */
-  .main-navigation ul {
-    max-width: 1040px; }
-  /* line 952, wccgn-style.scss */
-  .main-navigation li a {
-    color: #fff;
-    font-weight: 700; }
-  /* line 956, wccgn-style.scss */
-  .main-navigation li ul li a {
-    color: #fff;
-    background: #979797;
-    font-size: 16px;
-    font-size: 1.6rem; }
-    /* line 963, wccgn-style.scss */
-    .main-navigation li ul li a:hover {
-      background: #E30613;
-      color: #fff; }
-  /* line 972, wccgn-style.scss */
-  .main-navigation .children li:last-child {
-    float: none; }
-    /* line 974, wccgn-style.scss */
-    .main-navigation .children li:last-child a {
-      color: #fff;
-      font-weight: 700; } }
-/* line 985, wccgn-style.scss */
-.widget-area .widget {
-  margin: 0 auto; }
-  /* line 987, wccgn-style.scss */
-  .widget-area .widget p {
-    margin: 0 0 10px 0; }
-
-/* line 993, wccgn-style.scss */
-aside h3, aside h4 {
-  color: #E30613 !important;
-  text-transform: uppercase; }
-/* line 998, wccgn-style.scss */
-aside.widget_text {
-  text-align: left; }
-/* line 1001, wccgn-style.scss */
-aside.widget img {
-  max-width: 250px !important;
-  vertical-align: middle;
-  height: auto; }
-/* line 1006, wccgn-style.scss */
-aside .media-partner, aside .catering {
-  display: none; }
-/* line 1010, wccgn-style.scss */
-aside.wcb_widget_sponsors, aside.widget_nav_menu {
-  border-top: 1px solid #E30613;
-  padding: 20px 0; }
-
-/* line 1017, wccgn-style.scss */
-body.single-wcb_session footer.entry-meta {
-  display: none; }
-
-/* line 1022, wccgn-style.scss */
-table.wcpt-schedule th {
-  white-space: nowrap; }
-/* line 1025, wccgn-style.scss */
-table.wcpt-schedule > * {
-  font-size: .9em !important; }
-
-/* line 1030, wccgn-style.scss */
-.entry-content table a.wcpt-session-title {
-  font-size: .95em !important; }
-
-/* line 1034, wccgn-style.scss */
-#secondary .sponsor-level.bronze .sponsor-logo:nth-child(5) {
-  clear: both; }
-
-/* line 1039, wccgn-style.scss */
-.hidden {
-  display: none;
-  visibility: hidden; }
-
-/* line 1044, wccgn-style.scss */
-.tix-column-remaining {
-  display: none; }
-
-/* line 1048, wccgn-style.scss */
-.wcpt-session-speakers {
-  display: block; }
-
-/* line 1052, wccgn-style.scss */
-body.single-wcb_sponsor {
-  background: #fff; }
-  /* line 1053, wccgn-style.scss */
-  body.single-wcb_sponsor .entry-meta, body.single-wcb_sponsor .attachment-post-thumbnail {
-    display: none; }
-  /* line 1056, wccgn-style.scss */
-  body.single-wcb_sponsor #secondary .attachment-post-thumbnail {
-    display: block; }
-
-/* line 1062, wccgn-style.scss */
-a#tix-coupon-link {
-  color: #fff;
-  background: #98986a;
-  padding: 6px 12px;
-  text-decoration: none; }
-
-/* line 1069, wccgn-style.scss */
-body.single-wcb_sponsor #secondary {
-  clear: both;
-  background: #fff;
-  padding: 30px 0;
-  border-top: none; }
-
-/* line 1076, wccgn-style.scss */
-.wcb_widget_sponsors .sponsor-logo img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  border: none;
-  border-radius: 0;
-  box-shadow: none; }
-
-/* line 1085, wccgn-style.scss */
-.sponsor-level.community-partner {
-  display: none; }
-
-/*  große Bildschirme */
-@media only screen and (min-width: 1921px) {
-  /* line 1092, wccgn-style.scss */
-  .site-header {
-    background: #fff url("https://cologne.wordcamp.org/2015/files/2014/12/cgnpano1920.jpg") center top fixed no-repeat !important;
-    height: 460px; } }
-/* normale Bildschirme */
-@media only screen and (min-width: 600px) and (max-width: 1920px) {
-  /* line 1101, wccgn-style.scss */
+  */
+  /* line 911, wccgn-style.scss */
   .site-header {
     background: #fff url("https://cologne.wordcamp.org/2015/files/2014/12/cgnpano1920.jpg") right top fixed no-repeat !important;
     -webkit-background-size: cover;
@@ -954,26 +791,247 @@ body.single-wcb_sponsor #secondary {
     -o-background-size: cover;
     background-size: cover;
     height: 460px; } }
-/* Mobile */
-@media only screen and (max-width: 599px) {
-  /* line 1113, wccgn-style.scss */
+@media only screen and (min-width: 1921px) {
+  /* line 925, wccgn-style.scss */
   .site-header {
-    background: #fff url("https://cologne.wordcamp.org/2015/files/2014/12/cgnpano600.jpg") center top fixed no-repeat !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 340px; }
+    background: #fff url("https://cologne.wordcamp.org/2015/files/2014/12/cgnpano1920.jpg") center top fixed no-repeat !important;
+    height: 460px; } }
+/*
+@media only screen and (min-width: 600px) {
 
-  /* line 1121, wccgn-style.scss */
+  #tix-attendees {
+    .tix-columns-3 li {
+      width: 30%;
+    }
+    li {
+      float: left;
+      width: 50%;
+      margin-bottom: 20px;
+      height: 80px;
+    }
+  }
+  .wcorg-sponsorsp, .main-navigation {
+    margin: 0;
+  }
+  #content {
+    padding: 50px 0;
+  }
+
+  .feature-image {
+    width: 40%;
+    float: left;
+    display: block;
+  }
+  .feature-content {
+    float: right;
+    width: 55%;
+    padding: 3% 0;
+  }
+  .section-wrapper {
+    clear: both;
+    padding: 60px 0;
+    overflow: hidden;
+    border-top: 1px solid #dfdfb4;
+  }
+  .home #main {
+    h3 {
+      font-size: 24px;
+      font-size: 2.4rem;
+      line-height: 1;
+      padding: 0;
+    }
+    h4 {
+      font-size: 48px;
+      font-size: 4.8rem;
+      color: #72724f;
+      opacity: .8;
+    }
+  }
+  .site-header {
+
+    h1 {
+      font-size: 30px;
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      font-size: 36px;
+      font-size: 3.6rem;
+      line-height: .8;
+      margin: 30px 0 0;
+    }
+  }
   .header-image {
-    margin: 20px auto;
-    width: 265px; }
+    margin: 4em auto;
+  }
+  .home {
+    #main {
+      background: #fff;
+      color: #444;
+      width: 100%;
+      border-top: none;
+    }
+    .site-header {
+      h2 {
+        a:hover {
+          color: #fff;
+        }
+        color: #fff;
+      }
+    }
+  }
 
-  /* line 1127, wccgn-style.scss */
-  .wcorg-sponsors h3, .wcorg-sponsors p, .wcorg-sponsors ul {
-    margin: 0; } }
-@media only screen and (min-width: 600px) and (max-width: 820px) {
-  /* line 1135, wccgn-style.scss */
+
+
+  .widget-area {
+    float: none;
+  }
+
+}
+*/
+/*
+@media only screen and (max-width: 900px) {
+  #primary, .inner-wrapper, .site {
+    margin: 0 auto 60px auto;
+  }
+  .main-navigation a {
+    color: #fff;
+  }
+  .contact-form {
+    input {
+      &[type="text"], &[type="email"] {
+        max-width: 95%;
+        width: 300px;
+      }
+    }
+    textarea {
+      max-width: 95%;
+      width: 300px;
+    }
+  }
+  .site-content article {
+    margin-bottom: 1.714286rem;
+  }
   #secondary {
-    padding: 15px 10px; } }
+  padding: 20px 10px;
+  }
+
+  .widget-area .widget p, .widget-area .widget li, .widget-area .widget .textwidget {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 599px) {
+
+
+}
+
+.widget-area .widget {
+  margin: 0 auto;
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
+aside {
+  h3, h4 {
+  color: $cgn-red!important;
+  text-transform: uppercase;
+  }
+
+  &.widget_text {
+    text-align: left;
+  }
+  &.widget img {
+    max-width: 250px !important;
+    vertical-align: middle;
+    height: auto;
+  }
+  .media-partner, .catering {
+    display: none;
+  }
+
+  &.wcb_widget_sponsors, &.widget_nav_menu {
+    border-top: 1px solid $cgn-red;
+    padding: 20px 0;
+  }
+}
+
+
+body.single-wcb_session footer.entry-meta {
+  display: none;
+}
+
+table.wcpt-schedule {
+  th {
+    white-space: nowrap;
+  }
+  > * {
+    font-size: .9em !important;
+  }
+}
+
+.entry-content table a.wcpt-session-title {
+  font-size: .95em !important;
+}
+
+#secondary .sponsor-level.bronze .sponsor-logo:nth-child(5) {
+  clear: both;
+}
+
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.tix-column-remaining {
+  display: none;
+}
+
+.wcpt-session-speakers {
+  display: block;
+}
+
+body.single-wcb_sponsor {
+  .entry-meta, .attachment-post-thumbnail {
+    display: none;
+  }
+  #secondary .attachment-post-thumbnail {
+    display: block;
+  }
+  background: #fff;
+}
+
+a#tix-coupon-link {
+  color: #fff;
+  background: #98986a;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+body.single-wcb_sponsor #secondary {
+  clear: both;
+  background: #fff;
+  padding: 30px 0;
+  border-top: none;
+}
+
+.wcb_widget_sponsors .sponsor-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.sponsor-level.community-partner {
+  display: none;
+}
+*/
