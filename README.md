@@ -1,4 +1,4 @@
-# wccgn.style
+# wccgn-style
 
 Custom Stylesheet for https://cologne.wordcamp.org/2015/, based on the style of WordCamp Hamburg 2014 and the initial style sheet by Tammie Lister.
 
