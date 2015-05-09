@@ -31,12 +31,13 @@ Domain Path: languages
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-add_action( 'wp_enqueue_script', 'wccgn_style' );
+add_action( 'wp_print_styles', 'wccgn_style' );
 
 function wccgn_style() {
 	wp_enqueue_style(
 		$handle = 'wccgn',
 		$src    = plugins_url('wccgn-style.css', __FILE__),
-		$ver    = '1.0'
+		$deps   = 'twentytwelve-style',
+        $ver    = '1.0'
 		);
 }
