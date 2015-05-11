@@ -560,20 +560,6 @@ button:active {
   box-shadow: none;
   border: none; }
 
-/*
-
-ul#menu-menu.toggled-on li {
-  width: auto;
-  background: #fff;
-  border-radius: 0;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-size: 1.8rem;
-  a {
-    text-decoration: none;
-  }
-}
- */
 /* Nav Menu Bottom */
 aside ul li {
   display: inline;
@@ -591,17 +577,29 @@ aside ul li {
   .main-navigation div.nav-menu > ul {
     display: none !important; }
 
+  .main-navigation li ul {
+    position: relative;
+    z-index: 99;
+    height: auto;
+    width: auto; }
+    .main-navigation li ul li {
+      overflow: hidden; }
+      .main-navigation li ul li a {
+        font-size: 16px;
+        font-sioze: 1.6rem;
+        width: 100%; }
+
   .main-navigation ul.nav-menu.toggled-on {
+    margin-bottom: 9999px;
     display: inline-block !important; }
     .main-navigation ul.nav-menu.toggled-on .current_page_item, .main-navigation ul.nav-menu.toggled-on .current_page_parent, .main-navigation ul.nav-menu.toggled-on .current_page_parent li {
       background: #E30613; }
     .main-navigation ul.nav-menu.toggled-on li {
       font-size: 16px;
       font-size: 1.6rem;
-      line-height: 1.42857143;
       display: block;
       background: #979797;
-      padding: 20px;
+      padding: 10px 0;
       margin: 0;
       z-index: 99;
       position: relative;
@@ -609,23 +607,16 @@ aside ul li {
       text-align: left; }
       .main-navigation ul.nav-menu.toggled-on li:hover {
         background: #E30613; }
-    .main-navigation ul.nav-menu.toggled-on .children li {
-      padding: 5px 5px 5px 20px;
-      border: none; }
-      .main-navigation ul.nav-menu.toggled-on .children li:before {
-        position: absolute;
-        top: 8px;
-        margin: 8px 0 0 -12px;
-        vertical-align: middle;
-        display: inline-block;
-        width: 4px;
-        height: 4px;
-        background: #ccc;
-        content: ""; }
     .main-navigation ul.nav-menu.toggled-on a, .main-navigation ul.nav-menu.toggled-on a:visited, .main-navigation ul.nav-menu.toggled-on a:hover, .main-navigation ul.nav-menu.toggled-on a:active, .main-navigation ul.nav-menu.toggled-on a:focus {
       text-decoration: none;
       text-transform: uppercase;
-      color: #fff; }
+      color: #fff;
+      padding: 20px; }
+    .main-navigation ul.nav-menu.toggled-on .sub-menu li {
+      border: none; }
+    .main-navigation ul.nav-menu.toggled-on .sub-menu a {
+      padding: 0 0 0 20px;
+      border: 0; }
 
   .menu-toggle {
     display: inline;
