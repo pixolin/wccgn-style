@@ -628,6 +628,7 @@ body.single-wcb_sponsor #secondary {
 
 #tix-attendees .tix-columns-3 li {
   width: 30%;
+  float: left;
 }
 
 .tix-column-remaining {
@@ -640,18 +641,6 @@ a#tix-coupon-link {
   padding: 6px 12px;
   text-decoration: none;
 }
-
-// 11. Attendees
-#tix-attendees li {
-  float: none;
-  width: 100%;
-}
-
-
-#tix-attendees .tix-columns-3 li {
-  width: 95%;
-}
-
 
 // 12. Organizers
 // Icons for social networking for speakers, organizers
@@ -803,7 +792,22 @@ color: $cgn-red;
 
 
 // 16. Media Queries
-// 16.1 Small Screens (below 900px)
+// 16.1 Tiny Screens (below 400px)
+@media only screen and (max-width: 600px) {
+
+
+  #tix-attendees li {
+    float: none;
+    width: 100%;
+  }
+
+  #tix-attendees .tix-columns-3 li {
+    width: 95%;
+  }
+}
+
+
+// 16.2 Small Screens (below 900px)
 @media only screen and (max-width: 899px) {
 
 .main-navigation ul.nav-menu,
@@ -897,10 +901,6 @@ color: $cgn-red;
   }
 }
 
-#tix-attendees li {
-    float: none;
-    width: 100%;
-  }
 
 .contact-form {
   input {
@@ -922,7 +922,7 @@ color: $cgn-red;
 
 }
 
-// 16.1 Overwrite settings of TwentyTwelve
+// 16.3 Overwrite settings of TwentyTwelve
 @media screen and (min-width: 600px) {
   .main-navigation li a {
     line-height: 1;
@@ -945,9 +945,11 @@ color: $cgn-red;
     float: none;
   }
 
+
+
 }
 
-// 16.2 Intermediate Screens (900px to 1919px)
+// 16.4 Intermediate Screens (900px to 1919px)
 @media only screen and (min-width: 900px) {
 
   nav#site-navigation {
@@ -1127,7 +1129,7 @@ color: $cgn-red;
 
 }
 
-// 16.3 Large Screens (1920px and beyond)
+// 16.5 Large Screens (1920px and beyond)
 @media only screen and (min-width: 1921px) {
    .site-header {
     background: #fff url('https://cologne.wordcamp.org/2015/files/2014/12/cgnpano1920.jpg') center top fixed no-repeat !important;

@@ -461,7 +461,8 @@ body.single-wcb_sponsor #secondary {
   display: none; }
 
 #tix-attendees .tix-columns-3 li {
-  width: 30%; }
+  width: 30%;
+  float: left; }
 
 .tix-column-remaining {
   display: none; }
@@ -471,13 +472,6 @@ a#tix-coupon-link {
   background: #979797;
   padding: 6px 12px;
   text-decoration: none; }
-
-#tix-attendees li {
-  float: none;
-  width: 100%; }
-
-#tix-attendees .tix-columns-3 li {
-  width: 95%; }
 
 .socialbm {
   margin: 15px 0 0 150px; }
@@ -584,6 +578,13 @@ aside ul li {
 .widget-area .widget a:hover {
   color: #E30613; }
 
+@media only screen and (max-width: 600px) {
+  #tix-attendees li {
+    float: none;
+    width: 100%; }
+
+  #tix-attendees .tix-columns-3 li {
+    width: 95%; } }
 @media only screen and (max-width: 899px) {
   .main-navigation ul.nav-menu,
   .main-navigation div.nav-menu > ul {
@@ -648,10 +649,6 @@ aside ul li {
 
   .wcorg-sponsors h3, .wcorg-sponsors p, .wcorg-sponsors ul {
     margin: 0; }
-
-  #tix-attendees li {
-    float: none;
-    width: 100%; }
 
   .contact-form input[type="text"], .contact-form input[type="email"] {
     max-width: 95%;
