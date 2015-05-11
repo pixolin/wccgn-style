@@ -324,6 +324,9 @@ body {
 }
 
 aside {
+
+  padding: 20px 0;
+
   h3, h4 {
   color: $cgn-red!important;
   text-transform: uppercase;
@@ -341,12 +344,21 @@ aside {
     display: none;
   }
 
-  &.wcb_widget_sponsors, &.widget_nav_menu {
-    border-top: 1px solid $cgn-red;
-    padding: 20px 0;
-  }
+
+
 }
 
+.widget-area .widget_nav_menu {
+  float: left;
+  width: 48%;
+  margin-top: 7px;
+}
+
+.widget-area .widget_search {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
 
 footer {
   &[role="contentinfo"] {
@@ -525,9 +537,14 @@ input {
 
 // 9. Sponsors
 
-.wcb_widget_sponsors a.sponsor-logo {
-  float: left;
-  margin: 0 10px 10px 0;
+.wcb_widget_sponsors {
+   border-top: 1px solid $cgn-navigrey;
+  border-bottom: 1px solid $cgn-navigrey;
+
+  a.sponsor-logo {
+    float: left;
+    margin: 0 10px 10px 0;
+  }
 }
 
 .sponsor-level {

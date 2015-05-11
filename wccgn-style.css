@@ -240,20 +240,29 @@ body {
     font-size: 1.8rem;
     line-height: 1.4; }
 
-aside h3, aside h4 {
-  color: #E30613 !important;
-  text-transform: uppercase; }
-aside.widget_text {
-  text-align: left; }
-aside.widget img {
-  max-width: 250px !important;
-  vertical-align: middle;
-  height: auto; }
-aside .media-partner, aside .catering {
-  display: none; }
-aside.wcb_widget_sponsors, aside.widget_nav_menu {
-  border-top: 1px solid #E30613;
+aside {
   padding: 20px 0; }
+  aside h3, aside h4 {
+    color: #E30613 !important;
+    text-transform: uppercase; }
+  aside.widget_text {
+    text-align: left; }
+  aside.widget img {
+    max-width: 250px !important;
+    vertical-align: middle;
+    height: auto; }
+  aside .media-partner, aside .catering {
+    display: none; }
+
+.widget-area .widget_nav_menu {
+  float: left;
+  width: 48%;
+  margin-top: 7px; }
+
+.widget-area .widget_search {
+  float: right;
+  width: 50%;
+  text-align: right; }
 
 footer[role="contentinfo"] {
   display: none; }
@@ -389,9 +398,12 @@ input[type="submit"]:hover {
   border: none;
   box-shadow: none; }
 
-.wcb_widget_sponsors a.sponsor-logo {
-  float: left;
-  margin: 0 10px 10px 0; }
+.wcb_widget_sponsors {
+  border-top: 1px solid #979797;
+  border-bottom: 1px solid #979797; }
+  .wcb_widget_sponsors a.sponsor-logo {
+    float: left;
+    margin: 0 10px 10px 0; }
 
 .sponsor-level {
   clear: both;
