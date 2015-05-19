@@ -661,14 +661,12 @@ aside ul li {
     font-size: 14px;
     font-size: 1.4rem; } }
 @media screen and (min-width: 600px) {
-
   .main-navigation li a {
     line-height: 1; }
 
   .main-navigation li a:focus,
   .main-navigation li a:active {
-    color: #fff;
-  }
+    color: #fff; }
 
   .main-navigation ul.nav-menu,
   .main-navigation div.nav-menu > ul {

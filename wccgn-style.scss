@@ -928,6 +928,11 @@ color: $cgn-red;
     line-height: 1;
   }
 
+  .main-navigation li a:focus,
+  .main-navigation li a:active {
+    color: #fff;
+  }
+
   .main-navigation ul.nav-menu,
   .main-navigation div.nav-menu > ul {
     width: auto;
